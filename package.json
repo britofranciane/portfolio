@@ -18,8 +18,8 @@
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
     "@typescript-eslint/eslint-plugin": "^7.5.0",
     "@typescript-eslint/parser": "^7.5.0",
     "@vitejs/plugin-react": "^4.2.1",
@@ -29,6 +29,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "prettier": "^3.2.5",
+    "typescript": "^5.4.5",
     "vite": "^5.2.0"
   }
 }

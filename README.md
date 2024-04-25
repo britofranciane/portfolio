@@ -7,7 +7,6 @@ Este portfólio foi construído utilizando React, um framework JavaScript podero
 - React
 - TypeScript
 - Styled Components
-- Theme de Styled Components
 - Prettier
 - ESLint
 
@@ -20,6 +19,6 @@ Instruções sobre como obter uma cópia do projeto em execução em sua máquin
 O que você precisa para instalar o software e como instalá-los.
 
 ```bash
-# Exemplo de comando para instalar dependências
+# instalar dependências
 npm install
 ```
