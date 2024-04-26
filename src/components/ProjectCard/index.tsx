@@ -1,7 +1,15 @@
 import React from 'react';
 import { Container, Title, Description, Link, Content } from './styles';
 
-export function ProjectCard({ item }) {
+interface ProjectCardProps {
+  item: {
+    title: string;
+    description: string;
+    link: string;
+  };
+}
+
+export function ProjectCard({ item }: ProjectCardProps) {
   const { title, description, link } = item;
 
   return (
@@ -9,7 +17,9 @@ export function ProjectCard({ item }) {
       <Content>
         <Title>{title}</Title>
         <Description>{description}</Description>
-        <Link>{link}</Link>
+        <Link href={link} target='_blank' rel='noopener noreferrer'>
+          {link}
+        </Link>
       </Content>
     </Container>
   );

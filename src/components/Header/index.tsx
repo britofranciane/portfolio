@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Container, Content, Menu, ToggleButton, Menu2, Li } from './styles';
+import { Container, Content, Menu, ToggleButton, DeskTop, Li } from './styles';
 
 const menuItems = [
-  { content: 'Projetos', link: '' },
-  { content: 'Experiências', link: '' },
+  { content: 'Projetos', link: '#projects' },
+  { content: 'Experiências', link: '#experiences' },
   { content: 'Fale Comigo', link: 'https://wa.me/5531984185762' },
 ];
 
-const Header = () => {
+export function Header() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
 
-  const toggleMenuVisibility = () => {
+  function toggleMenuVisibility() {
     setIsMenuVisible(!isMenuVisible);
-  };
+  }
 
   return (
     <Container>
@@ -25,7 +25,7 @@ const Header = () => {
       >
         <h1>Franciane Brito</h1>
         <ToggleButton onClick={toggleMenuVisibility}>☰</ToggleButton>
-        <Menu2>
+        <DeskTop>
           <Menu
             as={motion.ul}
             initial={{ x: '-100vw' }}
@@ -38,7 +38,7 @@ const Header = () => {
               </a>
             ))}
           </Menu>
-        </Menu2>
+        </DeskTop>
       </Content>
       {isMenuVisible && (
         <Menu
@@ -47,13 +47,18 @@ const Header = () => {
           animate={{ x: 0 }}
           transition={{ type: 'spring', stiffness: 120 }}
         >
-          {menuItems.map((item, index) => (
-            <Li key={index}>{item}</Li>
+          {menuItems.map(({ content, link }, index) => (
+            <a
+              href={link}
+              key={index}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Li>{content}</Li>
+            </a>
           ))}
         </Menu>
       )}
     </Container>
   );
-};
-
-export default Header;
+}

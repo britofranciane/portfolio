@@ -33,9 +33,8 @@ export const Content = styled.div`
   box-sizing: border-box;
 `;
 
-export const Menu2 = styled.menu`
+export const DeskTop = styled.menu`
   display: flex;
-
   @media (max-width: 1200px) {
     display: none;
   }

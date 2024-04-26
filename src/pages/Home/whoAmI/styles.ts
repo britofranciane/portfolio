@@ -1,5 +1,4 @@
-// styles/StyledBackground.ts
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.section`
   background: ${({ theme }) => theme.colors.surface};
@@ -12,7 +11,7 @@ export const Container = styled.section`
   height: auto;
   gap: ${({ theme }) => theme.spacing.large};
   max-width: ${({ theme }) => theme.maxWidth};
-  margin: 54px 0;
+  margin: 3.5rem 0;
   box-sizing: border-box;
   @media (max-width: 1200px) {
     flex-direction: column;
@@ -35,6 +34,7 @@ export const ContainerCards = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  max-width: 18.75rem;
 `;
 
 export const Title = styled.h1`
@@ -59,7 +59,7 @@ export const Description = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.large};
   color: ${({ theme }) => theme.colors.onDark};
   text-align: start;
-  margin: 1rem 0 4rem;
+  margin: 1rem 0 2rem;
   line-height: 140%;
 `;
 

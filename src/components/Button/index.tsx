@@ -1,6 +1,10 @@
 import React from 'react';
 import { Container } from './styles';
 
-export function Button({ children }) {
+interface Props {
+  children: React.ReactNode;
+}
+
+export function Button({ children }: Props) {
   return <Container>{children}</Container>;
 }

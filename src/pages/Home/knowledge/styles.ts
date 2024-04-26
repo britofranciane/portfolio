@@ -11,7 +11,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 3rem;
+  gap: ${({ theme }) => theme.fontSizes.extraExtraExtraLarge};
   background: ${({ theme }) => theme.colors.surface};
   padding: 6rem 0;
   height: 100%;
@@ -28,7 +28,7 @@ export const Content = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   justify-items: center;
   align-items: center;
-  gap: 3rem;
+  gap: ${({ theme }) => theme.fontSizes.extraExtraExtraLarge};
   max-width: ${({ theme }) => theme.maxWidth};
   padding: ${({ theme }) => theme.spacing.medium};
   ${commonStyles}

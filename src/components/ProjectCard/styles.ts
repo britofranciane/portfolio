@@ -40,6 +40,7 @@ export const Link = styled.a`
   color: ${({ theme }) => theme.colors.secondary};
   margin: 0;
   cursor: pointer;
+  text-decoration: none;
 `;
 
 export const Description = styled.p`

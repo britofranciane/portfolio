@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.h2`
   color: ${({ theme }) => theme.colors.white};
   font-size: 2.5rem;
-  font-weight: 500;
+  font-weight: ${({ theme }) => theme.fontWeights.bold};
   margin: 0;
   width: max-content;
   &:after {

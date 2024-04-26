@@ -5,6 +5,10 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: ${({ theme }) => theme.spacing.small};
+  @media (max-width: 1200px) {
+    padding: 0;
+  }
 `;
 
 export const Image = styled.div<{ size?: string }>`

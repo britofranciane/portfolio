@@ -2,7 +2,7 @@ import React from 'react';
 import { ScrollDownButton } from './styles';
 import { RiArrowDownSLine } from 'react-icons/ri';
 
-const ScrollButton = () => {
+export const ScrollButton = () => {
   const scrollToNextSection = () => {
     const scrollAmount = window.innerHeight * 0.85;
     window.scrollBy({
@@ -17,5 +17,3 @@ const ScrollButton = () => {
     </ScrollDownButton>
   );
 };
-
-export default ScrollButton;

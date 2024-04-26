@@ -43,7 +43,7 @@ export function Projects() {
   ];
 
   return (
-    <Container>
+    <Container id={'projects'}>
       <Content>
         <Title>Projetos</Title>
         <ContainerCards>

@@ -8,7 +8,6 @@ import {
   IoLogoSass,
   IoLogoPython,
   IoLogoNodejs,
-  // IoLogoReact,
 } from 'react-icons/io';
 import {
   TbBrandNextjs,
@@ -24,7 +23,6 @@ const knowledgeIcons = [
   { Icon: IoLogoCss3, name: 'Css3' },
   { Icon: IoLogoJavascript, name: 'Javascript' },
   { Icon: IoLogoSass, name: 'Sass' },
-  // { Icon: IoLogoReact, name: 'React' },
   { Icon: TbBrandNextjs, name: 'Nextjs' },
   { Icon: SiStyledcomponents, name: 'Styled Components' },
   { Icon: SiTailwindcss, name: 'Tailwindcss' },
@@ -43,8 +41,8 @@ export function Knowledge() {
       <Title>Conhecimentos</Title>
 
       <Content>
-        {knowledgeIcons.map(({ Icon, name }, index) => (
-          <KnowledgeCard key={index} size={'medium'} name={name}>
+        {knowledgeIcons.map(({ Icon, name }, i) => (
+          <KnowledgeCard key={i} size={'medium'} name={name}>
             <Icon />
           </KnowledgeCard>
         ))}

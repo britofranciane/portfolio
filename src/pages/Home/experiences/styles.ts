@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.section`
   background-color: ${({ theme }) => theme.colors.surface};
   color: ${({ theme }) => theme.colors.white};
-  padding: 6rem 3rem;
+  padding: 6rem ${({ theme }) => theme.fontSizes.extraExtraExtraLarge};
   width: 100%;
   display: flex;
   justify-content: center;
@@ -20,26 +20,22 @@ export const Content = styled.div`
 `;
 
 export const ContainerExperiences = styled.div`
-  margin-top: 2rem;
   display: flex;
-  gap: 40px;
+  gap: ${({ theme }) => theme.spacing.extraExtraLarge};
+  margin-top: ${({ theme }) => theme.spacing.extraLarge};
   box-sizing: border-box;
   width: 100%;
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-
   @media (max-width: 1200px) {
     flex-direction: column;
   }
 `;
 
-export const Li = styled.li<{ isSelected: boolean }>`
-  padding: ${({ theme }) => `${theme.spacing.medium} ${theme.spacing.large}`};
+export const Button = styled.button<{ selected?: boolean }>`
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: ${({ theme }) =>
+    `${theme.spacing.large} ${theme.spacing.extraLarge}`};
   background: ${({ theme }) => theme.colors.dark};
   border-left: 0.25rem solid ${({ theme }) => theme.colors.outline};
   font-size: ${({ theme }) => theme.fontSizes.medium};
@@ -48,8 +44,8 @@ export const Li = styled.li<{ isSelected: boolean }>`
   width: 17.25rem;
   box-sizing: border-box;
   cursor: pointer;
-  color: ${({ isSelected }) =>
-    isSelected ? ({ theme }) => theme.colors.primary : '#ccc'};
+  color: ${({ selected, theme }) =>
+    selected ? theme.colors.primary : theme.colors.onDark};
   &:hover {
     color: ${({ theme }) => theme.colors.primary};
     border-left: 0.25rem solid ${({ theme }) => theme.colors.primary};
@@ -71,14 +67,14 @@ export const Head = styled.div`
   justify-content: space-between;
   @media (max-width: 1200px) {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: ${({ theme }) => theme.spacing.small};
   }
 `;
 
 export const Caption = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes.large};
   color: ${({ theme }) => theme.colors.primary};
-  margin: 1.5rem 0;
+  margin: ${({ theme }) => theme.spacing.extraExtraLarge} 0;
   font-weight: 500;
 `;
 
@@ -100,7 +96,7 @@ export const Description = styled.p`
 `;
 
 export const Menu = styled.div`
-  width: 25%;
+  width: 30%;
   @media (max-width: 1200px) {
     width: 100%;
     li {

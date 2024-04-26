@@ -8,13 +8,20 @@ import {
   Description,
   Menu,
   Head,
-  Li,
   ContainerExperiences,
+  Button,
 } from './styles';
 import { Title } from '@components/Title';
 
+interface Experience {
+  title: string;
+  date: string;
+  company: string;
+  description: string;
+}
+
 export function Experiences() {
-  const experiences = [
+  const experiences: Experience[] = [
     {
       title: 'Desenvolvedor Front-end Jr',
       date: 'Maio 2022 a Outubro 2023',
@@ -46,22 +53,21 @@ export function Experiences() {
   }
 
   return (
-    <Container>
+    <Container id={'experiences'}>
       <Content>
         <Title>Experiências</Title>
         <ContainerExperiences>
           <Menu>
-            <ul>
-              {experiences.map(({ company }, id) => (
-                <Li
-                  key={id}
-                  onClick={() => changeSelected(id)}
-                  isSelected={id === selected}
-                >
-                  {company}
-                </Li>
-              ))}
-            </ul>
+            {experiences.map(({ company }, id) => (
+              <Button
+                key={id}
+                selected={id === selected}
+                onClick={() => changeSelected(id)}
+                aria-selected={id === selected}
+              >
+                {company}
+              </Button>
+            ))}
           </Menu>
           <div>
             <Head>

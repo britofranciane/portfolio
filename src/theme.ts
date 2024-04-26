@@ -19,6 +19,7 @@ const theme = {
     large: '24px',
     extraLarge: '32px',
     extraExtraLarge: '36px',
+    extraExtraExtraLarge: '48px',
   },
   fontSizes: {
     small: '12px',
@@ -26,6 +27,7 @@ const theme = {
     large: '20px',
     extraLarge: '24px',
     extraExtraLarge: '32px',
+    extraExtraExtraLarge: '40px',
   },
   fontWeights: {
     regular: 400,
